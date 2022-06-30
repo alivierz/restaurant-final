@@ -41,6 +41,10 @@ if(config.nodeEnv === 'development'){
     app.use(morgan("combined"))
 }
 
+app.get("/", (req, res) =>{
+    res.status(200).json({message: "Esta es la base"})
+})
+
 //* Routes
 app.use("/api/v1/users", usersRouter)
 app.use("/api/v1/auth", authRouter)
