@@ -7,6 +7,6 @@ module.exports = {
     databaseName: process.env.database,
     user: process.env.username,
     password: process.env.password,
-    url: process.env.DOMAIN_HOST || "http://localhost:",
-    urlData: process.env.DATABASE_URL
+    //url: process.env.DOMAIN_HOST || "http://localhost:",
+    url: process.env.DATABASE_URL
 }
