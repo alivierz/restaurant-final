@@ -7,7 +7,7 @@ module.exports = {
      *
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */await queryInterface.createTable('order_items', {
+     */await queryInterface.createTable('verify_tokens', {
     id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
@@ -43,7 +43,7 @@ module.exports = {
     }
   })
     await queryInterface.addConstraint(
-      'order_items', //nombre de la tabla
+      'verify_tokens', //nombre de la tabla
       {
         fields: ['id'],//columnas que tendran esta restriccion
         type: 'unique', //restriccion para que los valores sean unicos
