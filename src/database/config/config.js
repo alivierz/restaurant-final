@@ -16,6 +16,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
+    url: config.url,
     use_env_variable: config.url,
     dialectOptions: {
       ssl: {
