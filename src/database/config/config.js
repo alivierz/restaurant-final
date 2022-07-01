@@ -1,3 +1,5 @@
+const config = require('../../config')
+
 module.exports = {
   "development": {
     "username": "alivier",
@@ -14,10 +16,12 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable": config.urlData,
+    dialectOptions: {
+      ssl: {
+          require: true,
+          rejectUnauthorized: false
+      }
+    }
   }
 }
